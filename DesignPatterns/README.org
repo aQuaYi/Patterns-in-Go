@@ -16,3 +16,4 @@
 
 
 [fn:1] http://wiki.c2.com/?GangOfFour
+

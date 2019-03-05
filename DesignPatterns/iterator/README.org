@@ -1,0 +1,8 @@
+* 迭代器模式 (iterator)
+
+为了遍历切片 slice 中的元素，
+  #+begin_src go
+	for i := 0; i <len(slice); i++ {
+		fmt.Println(slice[i])
+	}
+  #+end_src
