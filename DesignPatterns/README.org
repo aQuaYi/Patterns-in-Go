@@ -14,7 +14,10 @@
 
 ** 目录
 
-[[file: iterator/README.org][迭代器模式 (iterator) ]]
+1. [[file: iterator/README.org][迭代器模式 (iterator)]]
+1. [[file: adapter/README.org][适配器模式 (adapter)]]
+
+* 链接
 
 [fn:1] http://wiki.c2.com/?GangOfFour
 
