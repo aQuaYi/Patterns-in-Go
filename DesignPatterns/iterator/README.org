@@ -1,8 +1,13 @@
 * 迭代器模式 (iterator)
 
-为了遍历切片 slice 中的元素，
+为了遍历切片 slice 中的元素，可以使用以下代码
+
   #+begin_src go
 	for i := 0; i <len(slice); i++ {
 		fmt.Println(slice[i])
 	}
   #+end_src
+
+以上 3 行代码也就和 slice 耦合在了一起。当 slice 变成 map 的时候，以上代码必须进行修改。
+
+为了实现遍历方式和集合对象的解耦，于是有了迭代器模式。
