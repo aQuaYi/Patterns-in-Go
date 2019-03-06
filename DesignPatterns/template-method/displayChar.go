@@ -19,7 +19,7 @@ func newChar(c byte) *char {
 	}
 
 	cp.print = func() {
-		fmt.Printf("%s", string(cp.char))
+		fmt.Printf("%c", cp.char)
 	}
 
 	cp.close = func() {
