@@ -9,5 +9,6 @@ func main() {
 
 	bsi := bs.iterator()
 
+	// NOTICE: 通过 iterator 接口，printAll 与 bsi 实现了解耦
 	printAll(bsi)
 }

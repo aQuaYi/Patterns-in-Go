@@ -10,7 +10,7 @@ func (bsi *bookShelfIterator) hasNext() bool {
 }
 
 func (bsi *bookShelfIterator) next() interface{} {
-	b := bsi.bookShelf.books[bsi.nextIndex]
+	book := bsi.bookShelf.books[bsi.nextIndex]
 	bsi.nextIndex++
-	return b
+	return book
 }
