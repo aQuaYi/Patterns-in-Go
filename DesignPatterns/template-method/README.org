@@ -1,0 +1,35 @@
+* 模板方法模式 (template method)
+
+在 Go 语言中，函数是一等公民，可以作为参数传入另一个函数。所以，我觉得最符合 Go style 的模板方法模式的 Go 代码，是 sort 标准库中的 Slice 函数。
+ 
+#+begin_src go
+func Slice(slice interface{}, less func(i, j int) bool) {
+    // ...
+}
+#+end_src
+
+从以上方法中，可以看到 Slice 函数需要传入了两个参数
+- slice :: 需要排序的切片
+- less :: 比较 slice[i] 和 slice[j] 大小的函数
+
+排序算法的过程是固定的。不同的 less 函数，实现不同的排序效果。
+
+同样的道理， sort 标准库的 Sort 函数，可以对实现 sort.Interface 接口的数据进行排序。 
+
+#+begin_src go
+func Sort(data sort.Interface) {
+    // ...
+}
+#+end_src
+
+这是 Go 语言实现模板方法模式的第二种方法。
+
+在 Go 语言中，函数是一等公民，所以，也可以作为结构体的属性
+
+#+begin_src go
+type name struct {
+    f func()
+}
+#+end_src
+
+Go 语言实现模板方法模式的第三种方法，详见代码注释。

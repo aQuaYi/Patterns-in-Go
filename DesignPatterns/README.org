@@ -14,8 +14,9 @@
 
 ** 目录
 
-1. [[file: iterator/README.org][迭代器模式 (iterator)]]
-1. [[file: adapter/README.org][适配器模式 (adapter)]]
+1. [[file:iterator/README.org][迭代器模式 (iterator)]]
+1. [[file:adapter/README.org][适配器模式 (adapter)]]
+1. [[file:template-method/README.org][模板方法模式 (template method)]]
 
 * 链接
 
