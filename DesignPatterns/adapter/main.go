@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	pb := newPrintBanner(newBanner("content"))
+	pb := newPrintShower(newBanner("content"))
 
 	// NOTICE:
 	// print() 只接受 printer 接口
