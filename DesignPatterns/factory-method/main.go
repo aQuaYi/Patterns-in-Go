@@ -12,12 +12,11 @@ func main() {
 	card := factory.Create("Alice")
 	card.Use()
 
-	fmt.Println("")
+	fmt.Println()
 	fmt.Println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
-	fmt.Println("")
+	fmt.Println()
 
 	factory = television.NewFactory()
 	tv := factory.Create("No.001")
 	tv.Use()
-
 }
