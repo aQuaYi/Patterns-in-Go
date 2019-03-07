@@ -2,3 +2,15 @@
 
 工厂方法模式是模板方法模式的一个具体应用。工厂中的生产流程是固定的，生产步骤的具体内容由子类决定。
 
+在代码中可以看到，按照 <<fmframe>> 文件夹中规定的先 createProduct ，再 registerProduct 的生产流程。既可以生产 ID 卡，也可以生产电视机。
+
+所以说，frame 固化了生产流程。具体类负责定义生产对象的细节。
+
+** 困惑
+
+我在网上查找 Go 语言实现的 Factory Method 示范代码的时候，都没有看见他们实现通用的生产流程。比如
+
+- https://github.com/silsuer/golang-design-patterns/tree/master/factory-method-pattern
+- https://travix.io/factory-method-pattern-in-go-2e09b233453e
+- http://blog.ralch.com/tutorial/design-patterns/golang-factory-method/
+- https://matthewbrown.io/2016/01/23/factory-pattern-in-golang/

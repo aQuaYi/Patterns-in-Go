@@ -3,17 +3,7 @@ package card
 import (
 	"fmt"
 	"time"
-
-	frame "github.com/aQuaYi/Go-Patterns/DesignPatterns/factory-method/fmframe"
 )
-
-// H is
-const H = 1
-
-func ttt() {
-	fmt.Println(frame.ID)
-	return
-}
 
 // IDCard 是具体的产品类
 type IDCard struct {
@@ -33,5 +23,6 @@ func (c *IDCard) GetOwner() string {
 
 // Use implements Producter interface
 func (c *IDCard) Use() {
-	fmt.Printf("%s 使用了 IDCard :%s\n", c.owner, time.Now())
+	fmt.Printf("%s 使用了一次 ID Card\n", c.owner)
+	time.Sleep(time.Second)
 }

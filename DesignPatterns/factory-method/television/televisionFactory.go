@@ -6,19 +6,19 @@ import (
 	frame "github.com/aQuaYi/Go-Patterns/DesignPatterns/factory-method/fmframe"
 )
 
-// TelevisionFactory 是具体的工厂类，用于定义生产的细节
-type TelevisionFactory struct {
+// factory 是具体的工厂类，用于定义生产的细节
+type factory struct {
 	frame.Factory
 	owners []string
 }
 
-// NewTelevisionFactory 用于创建 IDCardFactory 对象
-func NewTelevisionFactory() *TelevisionFactory {
-	f := &TelevisionFactory{}
+// NewFactory 返回专门用来创建 *Television 的工厂实例
+func NewFactory() frame.Factoryer {
+	f := &factory{}
 
 	f.CreateProduct = func(owner string) frame.Producter {
 		p := newTelevision(owner)
-		fmt.Printf("  电视完成制造工作，序列号: %s\n", owner)
+		fmt.Printf("制造电视机，序列号: %s\n", owner)
 		return p
 	}
 
@@ -26,7 +26,7 @@ func NewTelevisionFactory() *TelevisionFactory {
 		c, _ := p.(*Television)
 		owner := c.GetOwner()
 		f.owners = append(f.owners, owner)
-		fmt.Printf("  电视完成注册工作，序列号: %s\n", owner)
+		fmt.Printf("注册电视机序号: %s\n", owner)
 	}
 
 	return f

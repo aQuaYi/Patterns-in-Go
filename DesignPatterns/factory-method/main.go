@@ -4,31 +4,20 @@ import (
 	"fmt"
 
 	card "github.com/aQuaYi/Go-Patterns/DesignPatterns/factory-method/IDCard"
-	tv "github.com/aQuaYi/Go-Patterns/DesignPatterns/factory-method/television"
+	"github.com/aQuaYi/Go-Patterns/DesignPatterns/factory-method/television"
 )
 
 func main() {
-	factory := card.NewIDCardFactory()
-
-	cardA := factory.Create("A")
-	cardB := factory.Create("B")
-	cardC := factory.Create("C")
-
-	cardA.Use()
-	cardB.Use()
-	cardC.Use()
+	factory := card.NewFactory()
+	card := factory.Create("Alice")
+	card.Use()
 
 	fmt.Println("")
-	fmt.Println("-=-=-=-=-=-=-")
+	fmt.Println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
 	fmt.Println("")
 
-	tvFactory := tv.NewTelevisionFactory()
+	factory = television.NewFactory()
+	tv := factory.Create("No.001")
+	tv.Use()
 
-	tvA := tvFactory.Create("No.001")
-	tvB := tvFactory.Create("No.002")
-	tvC := tvFactory.Create("No.003")
-
-	tvA.Use()
-	tvB.Use()
-	tvC.Use()
 }
