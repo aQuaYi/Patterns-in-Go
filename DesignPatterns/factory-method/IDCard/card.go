@@ -31,7 +31,7 @@ func (c *IDCard) GetOwner() string {
 	return c.owner
 }
 
-// Use implements Productor interface
+// Use implements Producter interface
 func (c *IDCard) Use() {
-	fmt.Printf("%s 使用了 IDCard :%s", c.owner, time.Now())
+	fmt.Printf("%s 使用了 IDCard :%s\n", c.owner, time.Now())
 }

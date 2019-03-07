@@ -1,6 +1,8 @@
 package card
 
 import (
+	"fmt"
+
 	frame "github.com/aQuaYi/Go-Patterns/DesignPatterns/factory-method/fmframe"
 )
 
@@ -16,12 +18,15 @@ func NewIDCardFactory() *IDCardFactory {
 
 	f.CreateProduct = func(owner string) frame.Producter {
 		p := newIDCard(owner)
+		fmt.Printf("  %s 的 ID Card 完成创建\n", owner)
 		return p
 	}
 
 	f.RegisterProduct = func(p frame.Producter) {
 		c, _ := p.(*IDCard)
-		f.owners = append(f.owners, c.GetOwner())
+		owner := c.GetOwner()
+		f.owners = append(f.owners, owner)
+		fmt.Printf("  %s 的 ID Card 完成注册\n", owner)
 	}
 
 	return f
