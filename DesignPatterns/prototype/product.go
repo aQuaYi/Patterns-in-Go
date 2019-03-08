@@ -29,7 +29,7 @@ func (mb *messageBox) use(s string) {
 }
 
 func (mb *messageBox) createClone() *messageBox {
-	clone := *mb
+	clone := *mb // shallow copy
 	return &clone
 }
 
@@ -44,13 +44,13 @@ func newUnderlinePen(char byte) *underlinePen {
 	}
 }
 
-func (mb *underlinePen) use(s string) {
+func (ul *underlinePen) use(s string) {
 	fmt.Printf("\"%s\"\n", s)
-	line := strings.Repeat(string(mb.ulchar), len(s))
+	line := strings.Repeat(string(ul.ulchar), len(s))
 	fmt.Println(" ", line)
 }
 
-func (mb *underlinePen) createClone() *underlinePen {
-	clone := *mb
+func (ul *underlinePen) createClone() *underlinePen {
+	clone := *ul // shallow copy
 	return &clone
 }
