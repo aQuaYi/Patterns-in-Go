@@ -4,6 +4,7 @@
 		"Productor",
 		"factorymethodidcard",
 		"fmframe",
-		"idcard"
+		"idcard",
+		"ulchar"
 	]
 }

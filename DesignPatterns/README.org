@@ -17,8 +17,11 @@
 1. [[file:iterator][迭代器模式 (iterator)]]
 1. [[file:adapter][适配器模式 (adapter)]]
 1. [[file:template-method][模板方法模式 (template method)]]
+1. [[file:singleton][单例模式 (singleton)]]
+1. [[file:prototype][原型模式 (singleton)]]
 
 * 链接
 
 [fn:1] http://wiki.c2.com/?GangOfFour
 
+CAM1320
