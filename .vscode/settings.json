@@ -5,6 +5,9 @@
 		"factorymethodidcard",
 		"fmframe",
 		"idcard",
-		"ulchar"
+		"mbox",
+		"sbox",
+		"ulchar",
+		"upen"
 	]
 }
