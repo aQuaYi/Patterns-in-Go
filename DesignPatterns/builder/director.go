@@ -11,6 +11,7 @@ func newDirector(b builder) *director {
 }
 
 func (d *director) construct() {
+	d.begin("greeting-note")
 	d.makeTitle("Greeting")
 	d.makeString("上午")
 	d.makeItems([]string{
@@ -26,5 +27,6 @@ func (d *director) construct() {
 		"晚上好",
 		"晚安",
 	})
+	d.end()
 	d.output()
 }
