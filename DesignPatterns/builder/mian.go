@@ -5,7 +5,7 @@ func main() {
 	director := newDirector(mdb)
 	director.construct()
 
-	hb := newHtmlBuilder()
+	hb := newHTMLBuilder()
 	director = newDirector(hb)
 	director.construct()
 }

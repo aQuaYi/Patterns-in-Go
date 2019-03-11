@@ -10,7 +10,7 @@ type htmlBuilder struct {
 	filename, title string
 }
 
-func newHtmlBuilder() *htmlBuilder {
+func newHTMLBuilder() *htmlBuilder {
 	return &htmlBuilder{}
 }
 
