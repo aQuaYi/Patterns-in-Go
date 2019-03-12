@@ -4,9 +4,9 @@ type countDisplay struct {
 	*display
 }
 
-func newCountDisplay(d displayImp) *countDisplay {
+func newCountDisplay(di displayImp) *countDisplay {
 	return &countDisplay{
-		display: newDisplay(d),
+		display: newDisplay(di),
 	}
 }
 

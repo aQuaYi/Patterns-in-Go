@@ -4,9 +4,9 @@ type display struct {
 	displayImp
 }
 
-func newDisplay(d displayImp) *display {
+func newDisplay(di displayImp) *display {
 	return &display{
-		displayImp: d,
+		displayImp: di,
 	}
 }
 
