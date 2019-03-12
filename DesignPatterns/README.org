@@ -20,7 +20,8 @@
 1. [[file:singleton][单例模式 (singleton)]]
 1. [[file:prototype][原型模式 (prototype)]]
 1. [[file:builder][建造者模式 (builder)]]
-1. [[file:abstract-factory][抽象工厂模式 (abstract factory)]]
+1. [[file:abstract-factory][抽象工厂模式 (abstract factory)]]  TODO:
+1. [[file:bridge][桥接模式 (bridge)]]
 
 * 链接
 
