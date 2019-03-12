@@ -1,0 +1,7 @@
+* 桥接模式 (bridge)
+
+桥接模式用于链接类的功能层次模式和实现层次模式。
+
+桥接模式让（抽象的）功能与（具体的）实现解耦，两者可以单独变化而不影响另一方。
+
+ http://blog.ralch.com/tutorial/design-patterns/golang-bridge/
