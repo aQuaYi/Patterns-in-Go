@@ -32,12 +32,9 @@ func newHand(g gesture) *hand {
 }
 
 // return 1 if win
-func (h *hand) fight(opponent *hand) int {
-	if h.gesture == opponent.gesture {
-		return 0
-	}
+func (h *hand) isWin(opponent *hand) bool {
 	if (h.gesture+1)%3 == opponent.gesture {
-		return 1
+		return true
 	}
-	return -1
+	return false
 }
