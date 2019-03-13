@@ -22,6 +22,7 @@
 1. [[file:builder][建造者模式 (builder)]]
 1. [[file:abstract-factory][抽象工厂模式 (abstract factory)]]  TODO:
 1. [[file:bridge][桥接模式 (bridge)]]
+1. [[file:strategy][策略模式 (strategy)]]
 
 * 链接
 
