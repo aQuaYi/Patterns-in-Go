@@ -24,7 +24,7 @@
 8. [[file:abstract-factory][抽象工厂模式 (abstract factory)]]  TODO:
 9. [[file:bridge][桥接模式 (bridge)]]
 10. [[file:strategy][策略模式 (strategy)]]
-11. 
+11. [[file:composite][组合模式 (composite)]]
 12. 
 13. [[file:visitor][访问者模式 (visitor)]]
 
