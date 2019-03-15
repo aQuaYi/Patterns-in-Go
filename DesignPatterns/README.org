@@ -15,14 +15,18 @@
 ** 目录
 
 1. [[file:iterator][迭代器模式 (iterator)]]
-1. [[file:adapter][适配器模式 (adapter)]]
-1. [[file:template-method][模板方法模式 (template method)]]
-1. [[file:singleton][单例模式 (singleton)]]
-1. [[file:prototype][原型模式 (prototype)]]
-1. [[file:builder][建造者模式 (builder)]]
-1. [[file:abstract-factory][抽象工厂模式 (abstract factory)]]  TODO:
-1. [[file:bridge][桥接模式 (bridge)]]
-1. [[file:strategy][策略模式 (strategy)]]
+2. [[file:adapter][适配器模式 (adapter)]]
+3. [[file:template-method][模板方法模式 (template method)]]
+4. [[file:factory-method][工厂方法模式 (factory method)]]
+5. [[file:singleton][单例模式 (singleton)]]
+6. [[file:prototype][原型模式 (prototype)]]
+7. [[file:builder][建造者模式 (builder)]]
+8. [[file:abstract-factory][抽象工厂模式 (abstract factory)]]  TODO:
+9. [[file:bridge][桥接模式 (bridge)]]
+10. [[file:strategy][策略模式 (strategy)]]
+11. 
+12. 
+13. [[file:visitor][访问者模式 (visitor)]]
 
 * 链接
 
