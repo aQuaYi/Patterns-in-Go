@@ -3,6 +3,6 @@ package main
 type entry interface {
 	getName() string
 	getSize() int
-	print()
+	print(string)
 	add(entry)
 }

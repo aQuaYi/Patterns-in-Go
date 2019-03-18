@@ -22,9 +22,8 @@ func (f *file) getSize() int {
 	return f.size
 }
 
-func (f *file) print() {
-	fmt.Printf("%s (%d)\n", f.name, f.size)
-	return
+func (f *file) print(path string) {
+	fmt.Printf("%s/%s (%d)\n", path, f.name, f.size)
 }
 
 func (f *file) add(n entry) {
