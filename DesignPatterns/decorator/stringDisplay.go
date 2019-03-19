@@ -1,14 +1,13 @@
 package main
 
+// stringDisplay implements display interface
 type stringDisplay struct {
-	display
 	string
 }
 
 func newStringDisplay(s string) *stringDisplay {
 	return &stringDisplay{
-		display: display{},
-		string:  s,
+		string: s,
 	}
 }
 
@@ -22,4 +21,8 @@ func (sd *stringDisplay) getRows() int {
 
 func (sd *stringDisplay) getRowText(row int) string {
 	return sd.string
+}
+
+func (sd *stringDisplay) show() {
+	showFunc(sd)
 }

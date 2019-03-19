@@ -2,14 +2,15 @@ package main
 
 import "fmt"
 
-type display struct {
-	getColumns func() int
-	getRows    func() int
-	getRowText func() string
+type display interface {
+	getColumns() int
+	getRows() int
+	getRowText(int) string
+	show() // all delegate to showFunc
 }
 
-func (d display) show() {
+func showFunc(d display) {
 	for i := 0; i < d.getRows(); i++ {
-		fmt.Println(d.getRowText())
+		fmt.Println(d.getRowText(i))
 	}
 }

@@ -14,6 +14,8 @@
 
 ** 目录
 
+由于 Go 语言中没有继承，无法原模原样地实现设计模式中的原有示例。我尽量以 Go style 实现各个设计模式的精髓。
+
 1. [[file:iterator][迭代器模式 (iterator)]]
 2. [[file:adapter][适配器模式 (adapter)]]
 3. [[file:template-method][模板方法模式 (template method)]]
@@ -31,5 +33,3 @@
 * 链接
 
 [fn:1] http://wiki.c2.com/?GangOfFour
-
-CAM1320
