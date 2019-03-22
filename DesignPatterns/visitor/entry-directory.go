@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type directory struct {
 	name     string
 	size     int
@@ -24,14 +26,9 @@ func (d *directory) getSize() int {
 	return size
 }
 
-//  // move operation to listVisitor
-// func (d *directory) print(path string) {
-// 	path = fmt.Sprintf("%s/%s", path, d.name)
-// 	fmt.Printf("%s (%d)\n", path, d.getSize())
-// 	for _, e := range d.contents {
-// 		e.print(path)
-// 	}
-// }
+func (d *directory) String() string {
+	return fmt.Sprintf("%s (%d)", d.getName(), d.getSize())
+}
 
 func (d *directory) add(n entry) {
 	d.contents = append(d.contents, n)

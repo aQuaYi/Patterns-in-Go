@@ -13,5 +13,5 @@ func main() {
 	root.add(tmp)
 	root.add(usr)
 
-	root.print("")
+	root.accept(newListVisitor())
 }

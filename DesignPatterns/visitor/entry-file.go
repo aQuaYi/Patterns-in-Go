@@ -28,7 +28,11 @@ func (f *file) getSize() int {
 // }
 
 func (f *file) String() string {
-	return fmt.Sprintf("%s (%d)\n", f.name, f.size)
+	return fmt.Sprintf("%s (%d)", f.getName(), f.getSize())
+}
+
+func (f *file) add(e entry) {
+	panic("file can NOT add")
 }
 
 func (f *file) accept(v visitor) {
