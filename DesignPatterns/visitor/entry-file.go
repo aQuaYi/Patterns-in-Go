@@ -22,10 +22,15 @@ func (f *file) getSize() int {
 	return f.size
 }
 
-func (f *file) print(path string) {
-	fmt.Printf("%s/%s (%d)\n", path, f.name, f.size)
+// // move operation to listVisitor
+// func (f *file) print(path string) {
+// 	fmt.Printf("%s/%s (%d)\n", path, f.name, f.size)
+// }
+
+func (f *file) String() string {
+	return fmt.Sprintf("%s (%d)\n", f.name, f.size)
 }
 
-func (f *file) add(n entry) {
-	panic("can NOT add into file.")
+func (f *file) accept(v visitor) {
+	v.visit(f)
 }

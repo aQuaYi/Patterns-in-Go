@@ -10,6 +10,18 @@ type visitorMethod interface {
 }
 
 func switchMethod(v visitor, inf interface{}) {
-	// TODO: 完成
-	return
+	vm, ok := v.(visitorMethod)
+	if !ok {
+		panic("v do not implement visitorMethod interface")
+	}
+	switch inf.(type) {
+	case file:
+		f := inf.(file)
+		vm.visitFile(f)
+	case directory:
+		d := inf.(directory)
+		vm.visitDirectory(d)
+	default:
+		panic("inf is not an entry object")
+	}
 }
