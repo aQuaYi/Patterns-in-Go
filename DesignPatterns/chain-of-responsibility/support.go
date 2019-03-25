@@ -2,40 +2,46 @@ package main
 
 import "fmt"
 
-type support struct {
+type supporter interface {
+	deal(t *trouble)
+	setNext(supporter) supporter
+}
+
+type baseSupport struct {
 	name    string
-	next    *support
+	next    supporter
 	resolve func(*trouble) bool
 }
 
-func newSupport(name string) *support {
-	return &support{
+func newSupport(name string) *baseSupport {
+	return &baseSupport{
 		name: name,
 	}
 }
 
-func (s *support) setNext(ns *support) {
-	s.next = ns
+func (s *baseSupport) setNext(si supporter) supporter {
+	s.next = si
+	return si
 }
 
-func (s *support) support(t *trouble) {
+func (s *baseSupport) deal(t *trouble) {
 	if s.resolve(t) {
 		s.done(t)
 	} else if s.next != nil {
-		s.next.support(t)
+		s.next.deal(t)
 	} else {
 		s.fail(t)
 	}
 }
 
-func (s *support) done(t *trouble) {
+func (s *baseSupport) done(t *trouble) {
 	fmt.Printf("%s is resolved by %s.\n", t, s)
 }
 
-func (s *support) fail(t *trouble) {
+func (s *baseSupport) fail(t *trouble) {
 	fmt.Printf("%s can NOT be resolved.\n", t)
 }
 
-func (s *support) String() string {
+func (s *baseSupport) String() string {
 	return fmt.Sprintf("[%s]", s.name)
 }
