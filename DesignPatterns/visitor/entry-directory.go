@@ -14,6 +14,10 @@ func newDirectory(name string) *directory {
 	}
 }
 
+func (d *directory) String() string {
+	return fmt.Sprintf("%s (%d)", d.getName(), d.getSize())
+}
+
 func (d *directory) getName() string {
 	return d.name
 }
@@ -24,10 +28,6 @@ func (d *directory) getSize() int {
 		size += c.getSize()
 	}
 	return size
-}
-
-func (d *directory) String() string {
-	return fmt.Sprintf("%s (%d)", d.getName(), d.getSize())
 }
 
 func (d *directory) add(n entry) {

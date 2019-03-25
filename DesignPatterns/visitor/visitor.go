@@ -9,19 +9,19 @@ type visitorMethod interface {
 	visitDirectory(*directory)
 }
 
-func switchMethod(v visitor, inf interface{}) {
+func switchMethod(v visitor, itf interface{}) {
 	vm, ok := v.(visitorMethod)
 	if !ok {
 		panic("v do not implement visitorMethod interface")
 	}
-	switch inf.(type) {
+	switch itf.(type) {
 	case *file:
-		f := inf.(*file)
+		f := itf.(*file)
 		vm.visitFile(f)
 	case *directory:
-		d := inf.(*directory)
+		d := itf.(*directory)
 		vm.visitDirectory(d)
 	default:
-		panic("inf is not an entry object")
+		panic("itf is not an entry object")
 	}
 }
