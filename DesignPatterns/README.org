@@ -30,6 +30,7 @@
 12. [[file:decorator][装饰器模式 (decorator)]]
 13. [[file:visitor][访问者模式 (visitor)]]
 14. [[file:chain-of-responsibility][责任链模式 (chain of responsibility)]]
+14. [[file:facade][简单窗口模式 (facade)]]
 
 * 链接
 
