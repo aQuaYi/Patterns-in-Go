@@ -1,6 +1,6 @@
 package main
 
 type mediator interface {
-	createColleagues()
-	colleagueChanged()
+	turnedOven(bool)
+	turnedComputer(bool)
 }

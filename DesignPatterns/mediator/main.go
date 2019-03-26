@@ -1,10 +1,23 @@
 package main
 
-// 假设家中电表的容量有限，以下 3 样家用电器只能有一种
-// * computer
-// * refrigerator
-// * oven
+// 由于 oven 功耗很高，开启后，必须关闭 computer 和 refrigerator
+// oven 关闭后，自动开启 refrigerator
+// fan 保持与 computer 状态一致
+
+const (
+	on  = true
+	off = false
+)
 
 func main() {
+	remote := newRemote()
+	computer, oven := remote.config()
+	computer.turn(on)
+	computer.turn(off)
+	computer.turn(on)
+
+	oven.turn(on)
+	oven.turn(off)
+	oven.turn(on)
 
 }
