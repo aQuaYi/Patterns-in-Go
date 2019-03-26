@@ -6,6 +6,7 @@ import "fmt"
 type fan struct {
 	mediator
 	isWorking bool
+	tab       string
 }
 
 func newFan() *fan {
@@ -16,11 +17,17 @@ func (f *fan) setMediator(m mediator) {
 	f.mediator = m
 }
 
-func (f *fan) setStatus(enabled bool) {
+func (f *fan) turn(enabled bool) {
 	if enabled && !f.isWorking {
-		fmt.Println("\tfan is on...")
+		fmt.Println(f.tab + "fan is on...")
 	} else if !enabled && f.isWorking {
-		fmt.Println("\tfan is off...")
+		fmt.Println(f.tab + "fan is off...")
 	}
+	f.tab = ""
 	f.isWorking = enabled
+}
+
+func (f *fan) setStatus(enabled bool) {
+	f.tab = "\t"
+	f.turn(enabled)
 }

@@ -11,7 +11,12 @@ const (
 
 func main() {
 	remote := newRemote()
-	computer, oven := remote.config()
+	computer, oven, fan := remote.config()
+
+	fan.turn(on)
+	fan.turn(off)
+	fan.turn(on)
+
 	computer.turn(on)
 	computer.turn(off)
 	computer.turn(on)

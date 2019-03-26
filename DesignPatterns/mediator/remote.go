@@ -12,7 +12,7 @@ func newRemote() *remote {
 	return &remote{}
 }
 
-func (r *remote) config() (*computer, *oven) {
+func (r *remote) config() (*computer, *oven, *fan) {
 	c := newComputer()
 	c.setMediator(r)
 	r.c = c
@@ -25,7 +25,7 @@ func (r *remote) config() (*computer, *oven) {
 	rf := newRefrigerator()
 	rf.setMediator(r)
 	r.r = rf
-	return c, o
+	return c, o, f
 }
 
 func (r *remote) turnedOven(enabled bool) {
