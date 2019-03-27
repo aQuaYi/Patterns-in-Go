@@ -1,0 +1,5 @@
+* 观察者模式 (observer)
+
+观察者被动地等待消息源推送消息。 
+
+还可以以 Go style 的方式实现 observer，并且没有阻塞。具体代码请查看 [[https://github.com/aQuaYi/observer][aQuaYi/observer]] 。
