@@ -33,6 +33,7 @@
 15. [[file:facade][简单窗口模式 (facade)]]
 16. [[file:mediator][中介者模式 (mediator)]]
 17. [[file:observer][观察者模式 (observer)]]
+18. [[file:memento][备忘录模式 (memento)]]
 
 * 链接
 
