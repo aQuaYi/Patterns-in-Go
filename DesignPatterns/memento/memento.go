@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -17,7 +16,6 @@ func createMemento(g *gamer) *memento {
 			fruits = append(fruits, f)
 		}
 	}
-	fmt.Println("in createMemento", fruits)
 	return &memento{
 		money:  g.money,
 		fruits: fruits,
