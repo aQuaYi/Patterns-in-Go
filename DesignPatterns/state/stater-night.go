@@ -18,7 +18,7 @@ func newNightState() *nightState {
 }
 
 func (n *nightState) doClock(c contexter, hour int) {
-	if 9 <= hour || hour < 17 {
+	if 9 <= hour && hour < 17 {
 		c.changeState(newDayState())
 	}
 }
