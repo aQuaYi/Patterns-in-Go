@@ -1,0 +1,4 @@
+* 代理模式 (proxy)
+
+在 user 和 server 之间添加一个 proxy。形成了 user → proxy → server 的调用关系。简单功能由 proxy 自行处理，不得不用上 server 的时候，再由 proxy 调用 server 来获取结果。
+

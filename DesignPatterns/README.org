@@ -35,6 +35,8 @@
 17. [[file:observer][观察者模式 (observer)]]
 18. [[file:memento][备忘录模式 (memento)]]
 19. [[file:state][状态模式 (state)]]
+20. [[file:flyweight][轻量模式 (flyweight)]]
+21. [[file:proxy][代理模式 (proxy)]]
 
 * 链接
 
