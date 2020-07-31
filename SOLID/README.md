@@ -15,7 +15,97 @@ SOLID 是基本指导原则，用于帮助设计稳健的软件。
 
 > Software entities like classes,modules and functions should be open for extension but closed for modifications.
 
-通过扩展而是修改来实现变化。
+通过扩展而不是修改来实现变化。
+
+```go
+package main
+
+import "fmt"
+
+type calculate struct {
+	a, b int
+}
+
+func newCalculate(a, b int) *calculate {
+	return &calculate{
+		a: a,
+		b: b,
+	}
+}
+
+func (c *calculate) do() int {
+	return c.a + c.b
+}
+
+func main() {
+	c := newCalculate(2, 3)
+	fmt.Println(c.do())
+}
+```
+
+在上面的代码中, `calculate.do()` 会执行加法运算。如果想要其执行乘法运算。就必须要修改成
+
+```go
+func (c *calculate) do() int {
+	return c.a * c.b
+}
+```
+
+这样就违反了开闭原则。因为需要修改元代码，才能实现加法变乘法。
+
+如果运用[策略方法](../DesignPatterns/strategy)，就可以不违背开闭原则。
+
+```go
+package main
+
+import "fmt"
+
+type calculate struct {
+	a, b int
+	executer
+}
+
+type executer interface {
+	execute(int, int) int
+}
+
+func newCalculate(a, b int, e executer) *calculate {
+	return &calculate{
+		a:        a,
+		b:        b,
+		executer: e,
+	}
+}
+
+func (c *calculate) do() int {
+	return c.execute(c.a, c.b)
+}
+
+type add struct {
+}
+
+func (a add) execute(i, j int) int {
+	return i + j
+}
+
+type multiply struct {
+}
+
+func (m multiply) execute(a, b int) int {
+	return a * b
+}
+
+func main() {
+	c1 := newCalculate(2, 3, add{})
+	fmt.Println("calculate result is ", c1.do())
+
+	c2 := newCalculate(2, 3, multiply{})
+	fmt.Println("calculate result is ", c2.do())
+}
+
+```
+
+通过注入不同的计算方式，来修改计算方法。以后还需要修改成除法或者减法的时候。也只需要添加相关的计算方式即可。
 
 ## SRP - Single Responsibility Principle
 
