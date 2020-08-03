@@ -53,7 +53,7 @@ func (c *calculate) do() int {
 
 这样就违反了开闭原则。因为需要修改元代码，才能实现加法变乘法。
 
-如果运用[策略方法](../DesignPatterns/strategy)，就可以不违背开闭原则。
+如果运用[策略方法](../DesignPatterns/strategy)，就能开闭原则。
 
 ```go
 package main
@@ -105,7 +105,7 @@ func main() {
 
 ```
 
-通过注入不同的计算方式，来修改计算方法。以后还需要修改成除法或者减法的时候。也只需要添加相关的计算方式即可。
+通过注入不同的计算方式，来修改计算方法。以后还需要修改成除法或减法的话，也只需要添加相关的计算方式即可。
 
 ## SRP - Single Responsibility Principle
 
