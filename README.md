@@ -45,5 +45,3 @@ Go 语言是天生的并发语言。
 
 软件之软，在于重构。
 不预判软件未来的变化，始终以最适合当前需求的方式编写代码，就需要掌握重构的技巧。
-
-<script src="https://gist.github.com/sergey-suslov/18bf98a73c0e9125c496dfde63a2dd90.js"></script>
