@@ -43,7 +43,7 @@ func main() {
 }
 ```
 
-在上面的代码中, `calculate.do()` 会执行加法运算。如果想要其执行乘法运算。就必须要修改成
+在[源代码](SOLID/open-closed-principle/normal-calculate/calculate.go)中, `calculate.do()` 会执行加法运算。如果想要其执行乘法运算。就必须要修改成
 
 ```go
 func (c *calculate) do() int {
@@ -51,7 +51,7 @@ func (c *calculate) do() int {
 }
 ```
 
-这样就违反了开闭原则。因为需要修改元代码，才能实现加法变乘法。
+ 这样就违反了开闭原则。因为需要修改元代码，才能实现加法变乘法。
 
 如果运用[策略方法](../DesignPatterns/strategy)，就能开闭原则。
 
@@ -105,6 +105,7 @@ func main() {
 
 ```
 
+[源代码](SOLID/open-closed-principle/strategy-calculate/calculate.go)
 通过注入不同的计算方式，来修改计算方法。以后还需要修改成除法或减法的话，也只需要添加相关的计算方式即可。
 
 ## SRP - Single Responsibility Principle
